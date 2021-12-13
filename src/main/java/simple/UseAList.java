@@ -22,6 +22,7 @@ public class UseAList {
   }
 
   public static void main(String[] args) {
+    List<LocalDate> lld = null;
     List<String> names =
         new ArrayList<>(List.of(/*LocalDate.now(), */"Alfred"));
 //        new ArrayList<String>(List.of(LocalDate.now(), "Alfred"));
