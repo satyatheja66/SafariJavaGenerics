@@ -41,5 +41,23 @@ public class UseAList {
     var obj =
         b ? "Hello" : 99;
 
+    // generics are restricted to reference types
+//    List<int> li = null;
+    // but this is fine: arrays are objects
+    List<int[]> lia = null;
+
+    if (lia instanceof List) {
+      System.out.println("Yes, it's a List");
+    }
+
+    // Type erasure has removed the int[] from the object
+    // so this is not allowed!!!
+//    if (lia instanceof List<int[]>) {
+//      System.out.println("Yes, it's a List");
+//    }
+
   }
+
+  void doStuff(List<String> lst) {}
+  List<String> lstr;
 }
